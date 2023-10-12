@@ -41,7 +41,7 @@ class Game
     protected $flips = 1;
 
 
-    public function __construct($player1, $player2)
+    public function __construct(Player $player1, Player $player2)
     {
         $this->player1 = $player1;
         $this->player2 = $player2;
@@ -96,8 +96,8 @@ EOT;
 }
 
 $game = new Game(
-    new Player("Fedia", rand(1,10000)),
-    new Player("Sveta", rand(1,10000))
+    new Player("Fedia", rand(1,100)),
+    new Player("Sveta", rand(1,100))
 );
 
 $game->start();
